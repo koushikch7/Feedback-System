@@ -1,1 +1,3 @@
-<?php require 'title.php';?>
+<?php 
+session_start();
+require('xampp.php');?>

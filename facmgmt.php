@@ -10,35 +10,29 @@ require 'ahead.php';
          <div class="col-md-4">
 <div class="form-group">
 <label>Name:</label>
-     <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+     <input type="text" required class="form-control" id="name" placeholder="Enter Name" name="name">
      </div>
 <div class="form-group">
      <label>Email:</label>
-     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+     <input type="email" required class="form-control" id="email" placeholder="Enter email" name="email">
      </div>
+    
      <div class="form-group">
-     <label>Password:</label>
-     <input type="password" class="form-control" id="pass" placeholder="Enter Password" name="pass"></div>
-     <div class="form-group">
-     <label>Phone no:</label>
-     <input type="number" class="form-control" id="phno" placeholder="Enter Phone no" name="phno"></div>
-     <div class="form-group">
-<label>Skills:</label>
-     <input type="text" class="form-control" id="skills" placeholder="Enter Skills" name="skills">
-     </div>
-      <div class="form-group">
-<label>Designation:</label>
-     <input type="text" class="form-control" id="desgn" placeholder="Enter Designation" name="desgn">
-     </div>
+<!--     <label>Phone no:</label>
+     <input type="number" required class="form-control" id="phno" placeholder="Enter Phone no" name="phno" pattern="[0-9]{10}" minlength=10 maxlength=11 ></div>
+    -->
   <div class="form-group">
       <label>Department:</label>
- <select id="dept" class="form-control" name="dept">
+ <select id="dept" class="form-control" name="dept" required>
   <option value="CSE">CSE</option>
   <option value="ECE">ECE</option>
   <option value="CIV">CIVIL</option>
   <option value="MECH">MECH</option>
   <option value="EEE">EEE</option>
   <option value="IS">IS</option>
+  <option value="MATHS">MATHS</option>
+  <option value="C-C">C-C</option>
+  <option value="P-C">P-C</option>
 </select>
   
 </div>

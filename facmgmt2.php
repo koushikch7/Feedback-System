@@ -1,29 +1,28 @@
 <?php
 require 'ahead.php';
-$con = mysqli_connect("localhost:3306", "root", "") or die("unable to connect");
-mysqli_select_db($con, 'college');
+require 'connection.php';
 $sql = "select * from faculty";
  if($result1 = mysqli_query($con, $sql)){
     if(mysqli_num_rows($result1) > 0){
         ?>
+<br>
+<div class="container">
+    <div class="h2 text-center">Faculty Details</div>
 <table class="table table-bordered"><tr>
-                 <th>name</th>
-                 <th>email</th>
-                 <th>pass</th>
-                 <th>phno</th>
-                <th>skills</th>
-                <th>desgn</th>
-                <th>dept</th>
+                 <th>NAME</th>
+                 <th>EMAIL</th>
+                
+                  <!--<th>PHONE#</th>-->
+                
+                <th>DEPT</th>
             </tr>
         <?php
         while($row = mysqli_fetch_array($result1)){
   ?>
-  <tr><td><?php echo $row['name'] ?>
-  </td><td><?php echo $row['email'] ?>
-  </td><td><?php echo $row['pass'] ?>
-  </td><td><?php echo $row['phno'] ?>
-  </td><td><?php echo $row['skills'] ?>
-  </td><td><?php echo  $row['desgn'] ?>
+            <tr><td><?php echo strtoupper($row['name']) ?>
+                </td><td><?php echo strtoupper($row['email']) ?>
+  <!-- </td><td><?php echo $row['phno'] ?> -->
+
       </td><td><?php echo  $row['dept'] ?>
   </td></tr>
   <?php
@@ -41,3 +40,4 @@ else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 }
 ?>
+</div>

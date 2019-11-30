@@ -1,7 +1,7 @@
 <?php
 require 'connection.php';
-$lname = $_GET['lname'];
-$fname = $_GET['fname'];
+$lname = trim($_GET['lname']);
+$fname = trim($_GET['fname']);
 $rfeed = $_GET['rfeed'];
 $ifeed =$_GET['ifeed'];
 $pfeed = $_GET['pfeed'];
@@ -15,5 +15,10 @@ $vfeed = $_GET['vfeed'];
 $scover =$_GET['scover'];
 $usnno = $_GET['usnno'];
 
-$result1 = mysqli_query($con,"insert into feedback1 (lname,fname,rfeed,ifeed,pfeed,afeed,sfeed,crfeed,bfeed,ffeed,cofeed,vfeed,scover,usnno,date) values ('".$lname."','".$fname."','".$rfeed."','".$ifeed."','".$pfeed."','".$afeed."','".$sfeed."','".$crfeed."','".$bfeed."','".$ffeed."','".$cofeed."','".$vfeed."','".$scover."','".$usnno."',now())");
+$dept =$_GET['dept'];
+$sem = $_GET['sem'];
+$sec = $_GET['sec'];
+$ayear =$_GET['ayear'];
+$degree = $_GET['degree'];
+$result1 = mysqli_query($con,"insert into feedback1 (dept,sem,sec,ayear,degree,lname,fname,rfeed,ifeed,pfeed,afeed,sfeed,crfeed,bfeed,ffeed,cofeed,vfeed,scover,usnno,date) values ('".$dept."','".$sem."','".$sec."','".$ayear."','".$degree."','".$lname."','".$fname."','".$rfeed."','".$ifeed."','".$pfeed."','".$afeed."','".$sfeed."','".$crfeed."','".$bfeed."','".$ffeed."','".$cofeed."','".$vfeed."','".$scover."','".$usnno."',now())");
 ?>
